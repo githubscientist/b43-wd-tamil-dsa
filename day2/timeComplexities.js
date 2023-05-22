@@ -270,8 +270,105 @@
 
 */
 
-console.log(10, Math.log2(10));
-console.log(29, Math.log2(29));
-console.log(30, Math.log2(30));
-console.log(31, Math.log2(31));
-console.log(40, Math.log2(40));
+// console.log(10, Math.log2(10));
+// console.log(29, Math.log2(29));
+// console.log(30, Math.log2(30));
+// console.log(31, Math.log2(31));
+// console.log(40, Math.log2(40));
+
+/*
+    O(2^N)
+
+    Example Problem: Given an array of numbers A of size N, find in how many ways we can select the K numbers from array A. Where 0, 1, 2, 3, ....K is the range.
+
+    Sample Input: [1, 2]
+
+    Output:
+
+    select 0 items => () => 1 way
+    select 1 item => (1), (2) => 2 ways
+    select 2 items => (1, 2) => 1 way
+
+    Total number of ways = 4 ways
+
+    Sample Input: [1, 2, 3]
+
+    Output:
+
+    select 0 items => () => 1 way
+    select 1 item => (1), (2), (3) => 3 ways
+    select 2 items => (1, 2), (1, 3), (2, 3) => 3 ways
+    select 3 items => (1, 2, 3) => 1 way
+
+    Total number of ways = 1 + 3 + 3 + 1
+                         = 8 ways
+
+    For N = 2, Number of ways = 4
+    For N = 3, Number of ways = 8
+    For N = 4, Number of ways = 16
+
+    ...
+
+
+*/
+
+/*
+    N!
+
+    Example Problem: 
+
+    Given a string S of size N, find and print the number of ways in which the string characters can be rearranged.
+
+    Sample Input:
+
+    ab
+
+    Output:
+
+    ab
+    ba
+
+    Number of ways = 2
+
+
+    Sample Input:
+
+    abc
+
+    Output:
+
+    abc
+    acb
+    bac
+    bca
+    cab
+    cba
+
+    Number of ways = 6
+
+    Sample Input:
+
+    abcd
+
+    Output:
+
+    abcd
+    abdc
+    acdb
+    acbd
+    adbc
+    adcb
+    bacd
+    bcad
+    bcda
+    ...
+    ...
+
+    For N = 2, Number of ways = 2
+    For N = 3, Number of ways = 6
+    For N = 4, Number of ways = 24
+
+    O(N!)
+
+    N! = N x (N-1) x (N-2) x (N-3) x (N-4) x ..... 1
+*/
